@@ -1,1 +1,1 @@
-# task_JS
+# Solving tasks using JS
