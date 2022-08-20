@@ -1,0 +1,7 @@
+console.log("Запускаю ответы")
+alert("JavaScript разработан  Бренданом Эйхом (англ. Brendan Eich) в компании Netscape ")
+alert("Был создан за 10 дней")
+alert("В далёком 1995 году")
+alert("JavaScript это не Java")
+alert("Cпецификация языка, которая управляет JavaScript, называется ECMAScript")
+console.log("Ответы данны")
