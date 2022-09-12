@@ -95,7 +95,7 @@ buttonForDelete.forEach( (element, index) => {
 
 const checkTextValidation = ( text ) => {
      if ( !text ) {
-        return false , 'Пустое поле для добавления задачи!' 
+        return false 
      } 
      else {
         return true 
@@ -110,15 +110,10 @@ textForAdd.addEventListener( 'input' , (event) => {
     const { value } = target
     
     const messageBoxDOM = document.querySelector('.messageAboutError')
-
-    booleanValid, errorArray = checkTextValidation(value)
-    if ( !booleanValid) {
+    if ( !checkTextValidation(value)) {
         const newMassageBox = document.createElement('span')
         newMassageBox.className = 'messageAboutError'
-
-        errorArray.forEach( el => { 
-        newMassageBox.textContent = newMassageBox.textContent + el })
-
+        newMassageBox.textContent = 'Пустое поле для добавления задачи!'
         textForAdd.insertAdjacentElement('afterEnd',newMassageBox)
     } 
     else if ( checkTextValidation(value) && messageBoxDOM ){
@@ -134,6 +129,7 @@ textForm.addEventListener( 'submit' , ( event ) => {
         const { target } = event
         if (target.nameTask.value) {
             alert(`Вы создали задачу ${target.nameTask.value.trim()}` )
+
         }
 })
 
